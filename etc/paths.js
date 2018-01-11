@@ -1,6 +1,6 @@
 const { resolve, join } = require('path')
 
-const projectRoot = resolve(__dirname, '..', '..')
+const projectRoot = resolve(__dirname, '..')
 
 module.exports = {
   projectRoot,
@@ -9,7 +9,7 @@ module.exports = {
   metalsmithSource: 'content',
   metalsmithDestination: join('dist', 'site'),
   // Webpack
-  webpackSource: join(projectRoot, 'src', 'assets'),
+  webpackSource: join(projectRoot, 'client'),
   webpackDestination: join(projectRoot, 'dist', 'assets'),
   webpackPublicPath: '/assets/',
   // Server

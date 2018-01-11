@@ -9,8 +9,8 @@ import BrowserSync from 'browser-sync'
 import stripAnsi from 'strip-ansi'
 
 import metalsmith from './metalsmith'
-import webpackConfig from '../../webpack.config.js'
-import paths from '../config/paths'
+import webpackConfig from '../webpack.config.js'
+import paths from './paths'
 
 const debug = Debug('metalsmith-webpack-suite')
 
@@ -91,6 +91,7 @@ browserSync.init({
         resolve(paths.projectRoot, 'postcss.config.js')
       ],
       fn: function (event, file) {
+        if (file.endsWith('.swp')) return;
         buildMetalsmith()
       }
     }

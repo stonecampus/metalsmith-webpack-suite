@@ -4,11 +4,11 @@
 > development and production environments.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://axe312.mit-license.org)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Build Status](https://img.shields.io/circleci/project/axe312ger/metalsmith-webpack-suite.svg?maxAge=2592000)](https://circleci.com/gh/axe312ger/metalsmith-webpack-suite)
-[![bitHound Code](https://www.bithound.io/github/axe312ger/metalsmith-webpack-suite/badges/code.svg)](https://www.bithound.io/github/axe312ger/metalsmith-webpack-suite)
 [![semantic-release](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+## Note
+
+This boilerplate is cloned from [axe312ger/metalsmith-webpack-suite](https://github.com/axe312ger/metalsmith-webpack-suite) with some directories changed so that server-side scripts can be added later. Please visit the original site for more information.
 
 ## :cloud: Installation
 
@@ -45,9 +45,8 @@ This boilerplate tries to combine the best out of [metalsmith](http://www.metals
 |-|-|
 |`./content/*` | website content files, mainly markdown files|
 |`./layouts/*.html` | [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts) layout files|
-|`./src/config/paths.js` | path configuration
-|`./src/assets/css,js` | page javascript and stylesheet files|
-|`./src/scripts/*.js`  | build process & dev environment scripts|
+|`./client/css,js` | page javascript and stylesheet files|
+|`./etc/*.js`  | path configuration & build process & dev environment scripts|
 |`./dist/assets/**/*` | webpack output directory|
 |`./dist/site/**/*` | metalsmith output directory|
 
@@ -95,10 +94,3 @@ With `yarn deploy` (or `npm run deploy`) you can deploy your latest website dire
 
 Running `yarn server` (or `npm run server`) will spawn a simple production server which is great for testing the final version.
 
-## :sparkling_heart: Contributing
-
-This project follows the [standard](https://github.com/feross/standard) coding and the [conventional changelog](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md) commit message style. Also it is configured to never decrease the code coverage of its tests.
-
-
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/axe312ger/metalsmith-webpack-suite/issues/new).
-But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.

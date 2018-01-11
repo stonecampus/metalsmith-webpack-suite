@@ -5,7 +5,7 @@ import layouts from 'metalsmith-layouts'
 import assets from 'metalsmith-assets'
 import fingerprint from 'metalsmith-fingerprint-ignore'
 
-import paths from '../config/paths'
+import paths from './paths'
 import { StatisticsPlugin } from './metalsmith-helpers'
 
 const __PROD__ = process.env.NODE_ENV === 'production'
